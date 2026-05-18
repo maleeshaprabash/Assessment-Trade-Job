@@ -13,6 +13,3 @@ export default function NavBar() {
         </nav>
     );
 }
-
-//maleeshaprabash9_db_user
-//oSv0t0FHGmP8HLzm
