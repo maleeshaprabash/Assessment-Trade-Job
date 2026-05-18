@@ -1,0 +1,20 @@
+import mongoose from 'mongoose';
+
+const jobRequestSchema = new mongoose.Schema(
+  {
+    title: { type: String },
+    description: { type: String, required: true },
+    category: { type: String },
+    location: { type: String },
+    contactName: { type: String },
+    urgency: { type: String },
+    status: {
+      type: String,
+      enum: ['Open', 'In Progress', 'Closed'],
+      default: 'Open',
+    },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model('JobRequest', jobRequestSchema);
